@@ -1,33 +1,217 @@
-.App {
+* {
+  box-sizing: border-box;
+}
+
+.modal {
+  position: fixed;
+  padding: 0;
+  margin: 0;
+  /* text-align: center; */
+  overflow-y: auto;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #14131f;
+}
+.flexContainerStoryboard {
+  display: flex;
+  justify-content: center;
+}
+
+.processTitle {
+  text-align: center;
+  color: ghostwhite;
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 5em;
+  margin-bottom: 1em;
+}
+.storyboardTitle {
+  text-align: center;
+  color: ghostwhite;
+  font-weight: 400;
+  font-size: 24px;
+  margin-top: 5em;
+  margin-bottom: 1em;
+}
+.modalHeader {
+  color: ghostwhite;
+  align-self: flex-start;
+}
+.modalContent {
+  flex: 1;
+  align-content: flex-start;
+}
+.modalP {
+  color: ghostwhite;
+  font-size: 1.3em;
+}
+.imageModalSize {
+  padding: 2em;
+  /* flex: 1; */
+  max-height: 25em;
+}
+.centerSlide {
+  text-align: center;
+  width: 92%;
+  margin: 0 auto;
+  /* Kanske inte nödvändig att ha? */
+  /* background-color: #14131f; */
+}
+.center {
+  min-width: 40%;
+  max-width: 50%;
+  margin-top: 10%;
+  display: block;
+  /* margin-left: auto;
+  margin-right: auto; */
+  /* background-repeat: no-repeat;
+  background-size: cover; */
+  display: block;
+  margin-left: 50%;
+  margin-right: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+}
+/* FIXA TILL CSS MED QUERY */
+.downArrow {
+  margin: 0 auto;
+  position: absolute;
+  left: 98vh;
+  bottom: 0;
+  color: ghostwhite;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
+.Graphical {
+  margin-top: 60vh;
+  text-align: center;
+  color: ghostwhite;
+}
+.Animation {
+  margin-top: 5em;
+  text-align: center;
+  color: ghostwhite;
+}
+.centeredIcons {
+  /* display: flex;
+  align-content: center; */
+  width: 60vh;
+  /* margin-top: -2%; */
+  display: block;
+  margin-left: 55%;
+  margin-right: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-55%) translateY(-55%);
+}
+.space {
+  text-align: center;
+  margin-top: 5em;
+  margin-left: 5em;
+  height: 40px;
+}
+.first {
+  margin-left: 0em;
+}
+.sameSize {
+  overflow: hidden;
+  padding: 2em;
+  margin-top: 2em;
+  max-height: 350px;
+  min-height: 250px;
+  object-fit: cover;
+  width: auto;
+  cursor: pointer;
+  opacity: 1;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+img:hover {
+  opacity: 0.4;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  filter: grayscale(100%);
+  -webkit-filter: blur(4px);
+  filter: blur(4px);
+}
+
+.centered {
+  padding-bottom: 5em;
+  text-align: center;
+}
+
+.slick-next:before {
+  position: absolute;
+  color: transparent;
+  right: 1em;
+  width: 20px;
+  height: 35px;
+  background: url(https://firebasestorage.googleapis.com/v0/b/portfolio-53c6c.appspot.com/o/right.png?alt=media&token=f3f1a520-7e72-4387-915f-b622fed385e7);
+}
+
+.slick-prev:before {
+  position: absolute;
+  color: transparent;
+  left: 1em;
+  width: 20px;
+  height: 35px;
+  background: url(https://firebasestorage.googleapis.com/v0/b/portfolio-53c6c.appspot.com/o/left.png?alt=media&token=be1975b6-3759-4d20-960c-d9789671c4d7);
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.5;
+  color: whitesmoke;
+  overflow-x: hidden;
+  background-color: #14131f;
+}
+.tiny {
+  height: 25px;
+  margin-top: -1em;
+  margin-left: 2em;
+}
+.tinyFirst {
+  height: 25px;
+  margin-top: -1em;
+  margin-left: 0em;
+}
+.container {
+  max-width: 960px;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: auto;
+  text-align: center;
+}
+.flexContainer {
+  margin-top: 5em;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.fullscreen-video-wrap {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1000;
+  overflow: hidden;
 }
 
-.App-link {
-  color: #61dafb;
+.fullscreen-video-wrap video {
+  min-height: 100%;
+  min-width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.storyboard {
+  /* Kanske behövs max här för att få det att flyta på bra på mindre skärmar */
+  max-width: 95%;
 }
