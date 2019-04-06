@@ -15,8 +15,8 @@ class App extends Component {
     return (
       <Router>
         <React.Fragment>
-          <Route exact path="/" component={Content} />
-          <Route exact path="/admin" component={Admin} />
+          <Route exact path="/portfolio/" component={Content} />
+          <Route exact path="/portfolio/admin/" component={Admin} />
         </React.Fragment>
       </Router>
     );
