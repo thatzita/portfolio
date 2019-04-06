@@ -12,11 +12,12 @@ class App extends Component {
   }
 
   render() {
+    console.log(process.env.PUBLIC_URL);
     return (
       <Router>
         <React.Fragment>
           <Route exact path="/portfolio/" component={Content} />
-          <Route exact path="/portfolio/admin/" component={Admin} />
+          <Route exact path="/admin/" component={Admin} />
         </React.Fragment>
       </Router>
     );
