@@ -135,15 +135,16 @@ export default class Carousel extends Component {
           </Modal>
         ) : // </div>
         null}
-        {this.props.title === "Graphical Design" ? (
-          <div style={{ textAlign: "center" }}>
-            <Image
-              className="downArrow"
-              src="https://firebasestorage.googleapis.com/v0/b/portfolio-53c6c.appspot.com/o/Path%201%402x.png?alt=media&token=869c7540-e7ac-4eeb-89aa-5b28e35f1e28"
-            />
-          </div>
-        ) : null}
+
         <div className={this.props.title}>
+          {/* {this.props.title === "Graphical Design" ? (
+            <div style={{ textAlign: "center" }}>
+              <Image
+                className="downArrow"
+                src="https://firebasestorage.googleapis.com/v0/b/portfolio-53c6c.appspot.com/o/Path%201%402x.png?alt=media&token=869c7540-e7ac-4eeb-89aa-5b28e35f1e28"
+              />
+            </div>
+          ) : null} */}
           <div className="centerSlide">
             <h1 style={{ marginBottom: "-1em" }}>{this.props.title}</h1>
             <Slider {...settings}>{carousel}</Slider>

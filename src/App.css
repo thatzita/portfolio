@@ -60,26 +60,28 @@
   /* background-color: #14131f; */
 }
 .center {
-  min-width: 40%;
-  max-width: 50%;
-  margin-top: 10%;
+  max-width: 85%;
+  min-width: 20%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 15%;
+  margin-bottom: 5%;
   display: block;
-  /* margin-left: auto;
-  margin-right: auto; */
-  /* background-repeat: no-repeat;
-  background-size: cover; */
-  display: block;
+  /*
+  margin-left: auto;
+  margin-right: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
   margin-left: 50%;
-  margin-right: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-50%) translateY(-50%);
+  margin-right: 50%; */
+  /* -webkit-transform: translateX(10%) translateY(10%);
+  transform: translateX(10%) translateY(10%); */
 }
 /* FIXA TILL CSS MED QUERY */
 .downArrow {
   margin: 0 auto;
-  position: absolute;
-  left: 98vh;
-  bottom: 0;
+  position: relative;
+  top: -15vh;
   color: ghostwhite;
   text-align: center;
 }
@@ -95,21 +97,38 @@
   color: ghostwhite;
 }
 .centeredIcons {
-  /* display: flex;
-  align-content: center; */
-  width: 60vh;
-  /* margin-top: -2%; */
-  display: block;
-  margin-left: 55%;
-  margin-right: 50%;
-  -webkit-transform: translateX(-50%) translateY(-50%);
-  transform: translateX(-55%) translateY(-55%);
+  /* display: flex; */
+  /* align-content: center; */
+  /* width: auto; */
+  /* height: 25px; */
+  /* margin-top: -2vh; */
+  display: relative;
+  right: 10%;
+  /* margin-left: 55%;
+  margin-right: 50%; */
+  /* -webkit-transform: translateX(40%) translateY(40%);
+  transform: translateX(20%) translateY(40%); */
+  /* margin: 0 auto; */
+  /* display: block; */
+  /* margin-top: -10vh; */
+  /* align-content: center; */
+  /* max-width: 85%;
+  min-width: 20%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 15%;
+  margin-bottom: 5%;
+  display: block; */
+}
+.maxCenter {
+  /* display: flex; */
 }
 .space {
   text-align: center;
-  margin-top: 5em;
-  margin-left: 5em;
-  height: 40px;
+  margin-top: 5vh;
+  margin-left: 5vh;
+  height: auto;
+  width: 50px;
 }
 .first {
   margin-left: 0em;
@@ -126,7 +145,7 @@
   opacity: 1;
 }
 
-img:hover {
+.centerSlide img:hover {
   opacity: 0.4;
   -webkit-transition: 0.3s ease-in-out;
   transition: 0.3s ease-in-out;
