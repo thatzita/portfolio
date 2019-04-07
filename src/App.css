@@ -1,5 +1,6 @@
 * {
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
+  /* max-width: 100%; */
 }
 
 .modal {
@@ -37,7 +38,6 @@
 }
 .modalHeader {
   color: ghostwhite;
-  /* align-self: flex-start; */
 }
 .modalContent {
   flex: 1;
@@ -56,15 +56,6 @@
   margin-top: 15%;
   margin-bottom: 5%;
   display: block;
-  /*
-  margin-left: auto;
-  margin-right: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  margin-left: 50%;
-  margin-right: 50%; */
-  /* -webkit-transform: translateX(10%) translateY(10%);
-  transform: translateX(10%) translateY(10%); */
 }
 
 .Graphical {
@@ -90,6 +81,25 @@
   padding-left: 10%;
   padding-right: 10%;
 }
+@media only screen and (min-width: 2502px) {
+  .slack-slider-modal {
+    width: 90%;
+  }
+  img.modalSize {
+    overflow: hidden;
+    padding: 2em;
+    margin-top: 2em;
+    height: 350px;
+    object-fit: contain;
+    width: auto;
+  }
+  .ui.fullscreen.modal {
+    width: 95% !important;
+    height: auto;
+    margin-left: 5vh;
+    background-color: "#14131f";
+  }
+}
 @media only screen and (max-width: 2501px) {
   .slack-slider-modal {
     width: 90%;
@@ -101,6 +111,12 @@
     height: 350px;
     object-fit: contain;
     width: auto;
+  }
+  .ui.fullscreen.modal {
+    width: 95% !important;
+    height: auto;
+    margin-left: 5vh;
+    background-color: "#14131f";
   }
 }
 @media only screen and (max-width: 1760px) {
@@ -126,6 +142,12 @@
     padding-left: 10%;
     padding-right: 10%;
   }
+  .ui.fullscreen.modal {
+    width: 95% !important;
+    height: auto;
+    margin-left: 4vh;
+    background-color: "#14131f";
+  }
 }
 @media only screen and (max-width: 1295px) {
   .slick-slider {
@@ -138,8 +160,21 @@
     padding-left: 10%;
     padding-right: 10%;
   }
+  .ui.fullscreen.modal {
+    width: 95% !important;
+    height: auto;
+    margin-left: 2vh;
+    background-color: "#14131f";
+  }
 }
-
+@media only screen and (max-width: 768px) {
+  .ui.fullscreen.modal {
+    width: 95% !important;
+    height: auto;
+    left: 2vh;
+    background-color: "#14131f";
+  }
+}
 .first {
   margin-left: 0em;
 }
@@ -235,8 +270,8 @@ body {
   left: 50%;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  min-width: 100%;
-  min-height: 100%;
+  min-width: 99%;
+  min-height: 99%;
   width: auto;
   height: auto;
   z-index: -1000;
@@ -244,8 +279,8 @@ body {
 }
 
 .fullscreen-video-wrap video {
-  min-height: 100%;
-  min-width: 100%;
+  min-height: 99%;
+  min-width: 99%;
   background-repeat: no-repeat;
   background-size: cover;
 }

@@ -12,7 +12,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(process.env.PUBLIC_URL);
     return (
       <Router>
         <React.Fragment>

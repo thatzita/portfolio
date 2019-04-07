@@ -49,7 +49,7 @@ export default class Carousel extends Component {
           }
         },
         {
-          breakpoint: 480,
+          breakpoint: 470,
           settings: {
             slidesToShow: 1,
             slidesToScroll: 1
@@ -118,14 +118,18 @@ export default class Carousel extends Component {
               size="fullscreen"
               open={this.state.modalOpen}
               onClose={this.handleClose}
-              style={{
-                backgroundColor: "#14131f",
-                marginTop: "2vh !important",
-                marginLeft: "auto",
-                marginRight: "auto",
-                position: "relative",
-                height: "auto"
-              }}
+              style={
+                {
+                  // backgroundColor: "#14131f",
+                  // marginTop: "2vh !important",
+                  // marginLeft: "auto",
+                  // marginRight: "auto",
+                  // left: "2vh",
+                  // position: "absolute",
+                  // height: "auto"
+                }
+              }
+              className="modalOrientation"
             >
               {/* <Modal.Header>Select a Photo</Modal.Header> */}
               <Modal.Content
