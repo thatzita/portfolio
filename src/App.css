@@ -1,5 +1,5 @@
 * {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
 }
 
 .modal {
@@ -23,21 +23,21 @@
   text-align: center;
   color: ghostwhite;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 32px;
   margin-top: 5em;
-  margin-bottom: 1em;
+  margin-bottom: -1.5em;
 }
 .storyboardTitle {
   text-align: center;
   color: ghostwhite;
   font-weight: 400;
-  font-size: 24px;
+  font-size: 32px;
   margin-top: 5em;
   margin-bottom: 1em;
 }
 .modalHeader {
   color: ghostwhite;
-  align-self: flex-start;
+  /* align-self: flex-start; */
 }
 .modalContent {
   flex: 1;
@@ -47,18 +47,7 @@
   color: ghostwhite;
   font-size: 1.3em;
 }
-.imageModalSize {
-  padding: 2em;
-  /* flex: 1; */
-  max-height: 25em;
-}
-.centerSlide {
-  text-align: center;
-  width: 92%;
-  margin: 0 auto;
-  /* Kanske inte nödvändig att ha? */
-  /* background-color: #14131f; */
-}
+
 .center {
   max-width: 85%;
   min-width: 20%;
@@ -77,14 +66,6 @@
   /* -webkit-transform: translateX(10%) translateY(10%);
   transform: translateX(10%) translateY(10%); */
 }
-/* FIXA TILL CSS MED QUERY */
-.downArrow {
-  margin: 0 auto;
-  position: relative;
-  top: -15vh;
-  color: ghostwhite;
-  text-align: center;
-}
 
 .Graphical {
   margin-top: 60vh;
@@ -97,39 +78,68 @@
   color: ghostwhite;
 }
 .centeredIcons {
-  /* display: flex; */
-  /* align-content: center; */
-  /* width: auto; */
-  /* height: 25px; */
-  /* margin-top: -2vh; */
   display: relative;
   right: 10%;
-  /* margin-left: 55%;
-  margin-right: 50%; */
-  /* -webkit-transform: translateX(40%) translateY(40%);
-  transform: translateX(20%) translateY(40%); */
-  /* margin: 0 auto; */
-  /* display: block; */
-  /* margin-top: -10vh; */
-  /* align-content: center; */
-  /* max-width: 85%;
-  min-width: 20%;
-  height: auto;
-  margin: 0 auto;
-  margin-top: 15%;
-  margin-bottom: 5%;
-  display: block; */
 }
-.maxCenter {
-  /* display: flex; */
+.slick-track {
+  display: flex;
 }
-.space {
-  text-align: center;
-  margin-top: 5vh;
-  margin-left: 5vh;
-  height: auto;
-  width: 50px;
+.slick-slider {
+  width: 150%;
+  /* overflow: hidden; */
+  padding-left: 10%;
+  padding-right: 10%;
 }
+@media only screen and (max-width: 2501px) {
+  .slack-slider-modal {
+    width: 90%;
+  }
+  img.modalSize {
+    overflow: hidden;
+    padding: 2em;
+    margin-top: 2em;
+    height: 350px;
+    object-fit: contain;
+    width: auto;
+  }
+}
+@media only screen and (max-width: 1760px) {
+  .slick-slider {
+    width: 130%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .slack-slider-modal {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+@media only screen and (max-width: 1530px) {
+  .slick-slider {
+    width: 110%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .slack-slider-modal {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+@media only screen and (max-width: 1295px) {
+  .slick-slider {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .slack-slider-modal {
+    width: 100%;
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
 .first {
   margin-left: 0em;
 }
@@ -137,14 +147,21 @@
   overflow: hidden;
   padding: 2em;
   margin-top: 2em;
-  max-height: 350px;
-  min-height: 250px;
+  /* height: 80vh; */
+  height: 400px;
   object-fit: cover;
   width: auto;
   cursor: pointer;
   opacity: 1;
 }
-
+.modalSize {
+  overflow: hidden;
+  padding: 2em;
+  margin-top: 2em;
+  height: 300px;
+  object-fit: contain;
+  width: auto;
+}
 .centerSlide img:hover {
   opacity: 0.4;
   -webkit-transition: 0.3s ease-in-out;
@@ -162,6 +179,7 @@
 .slick-next:before {
   position: absolute;
   color: transparent;
+  bottom: -1.2em;
   right: 1em;
   width: 20px;
   height: 35px;
@@ -171,6 +189,7 @@
 .slick-prev:before {
   position: absolute;
   color: transparent;
+  bottom: -1.2em;
   left: 1em;
   width: 20px;
   height: 35px;
