@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { BrowserRouter as Router, Route, HashRouter } from "react-router-dom";
+import { BrowserRouter as Router, Route } from "react-router-dom";
 import Content from "./components/Content";
 import Admin from "./components/Admin";
 import "./App.css";
@@ -13,12 +13,12 @@ class App extends Component {
 
   render() {
     return (
-      <HashRouter basename="/">
+      <Router>
         <React.Fragment>
-          <Route path="/" component={Content} />
-          <Route exact path="/admin" component={Admin} />
+          <Route path="/portfolio/" component={Content} />
+          <Route exact path="/admin/" component={Admin} />
         </React.Fragment>
-      </HashRouter>
+      </Router>
     );
   }
 }
